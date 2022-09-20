@@ -134,7 +134,7 @@ bindsym $mod+Shift+a focus child
 set $ws1 "1: vim"
 set $ws2 "2: pdf"
 set $ws3 "3: www"
-set $ws4 "4"
+set $ws4 "4: files"
 set $ws5 "5"
 set $ws6 "6"
 set $ws7 "7"
@@ -172,7 +172,7 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 
 # Automatically open certain programs in certain workspaces. Note: class is from xprop's WM_CLASS(STRING).
 # assign [class="Evince"] → $ws2
-assign [class="Zotero"] → $ws2
+assign [class="Zotero"] → $ws4
 # assign [class="Firefox"] → $ws3
 assign [class="Steam"] → $ws10
 for_window [class="Spotify"] move --no-auto-back-and-forth to workspace $ws9
@@ -180,6 +180,7 @@ for_window [class="Spotify"] move --no-auto-back-and-forth to workspace $ws9
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+# to restart on the command line use: i3-msg restart
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
