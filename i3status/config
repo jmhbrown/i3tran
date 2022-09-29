@@ -16,7 +16,7 @@ order += "battery 0"
 order += "volume master"
 order += "tztime local"
 order += "tztime california"
-order += "tztime winnipeg"
+order += "tztime newhaven"
 order += "tztime edinburgh"
 order += "tztime toulouse"
 
@@ -26,7 +26,8 @@ wireless _first_ {
 }
 
 battery 0 {
-        format = "%status %percentage %remaining"
+        format = "%status %percentage %consumption"
+        path = "/sys/class/power_supply/BAT1/uevent"
 }
 
 volume master {
@@ -44,6 +45,12 @@ tztime local {
 tztime winnipeg {
   format = "(%H:%M %Z)"
   timezone = "America/Winnipeg"
+  hide_if_equals_localtime = true
+}
+
+tztime newhaven {
+  format = "(%H:%M %Z)"
+  timezone = "America/New_York"
   hide_if_equals_localtime = true
 }
 
