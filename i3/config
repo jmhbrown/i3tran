@@ -79,8 +79,10 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # move workspace between outputs (monitors) 
-bindsym $mod+Shift+less move workspace to output left
-bindsym $mod+Shift+greater move workspace to output right
+bindsym $mod+Control+Left move workspace to output left
+bindsym $mod+Control+Right move workspace to output right
+bindsym $mod+Control+Up move workspace to output up
+bindsym $mod+Control+Down move workspace to output down
 
 bindsym $mod+Shift+s exec /home/jenny/.config/i3/i3-display-swap.sh
 
@@ -195,6 +197,8 @@ client.focused          #004499 #0077ff #ffffff #f473f2   #0077ff
 # Get rid of title bar
 default_border pixel 4
 default_floating_border pixel 4
+# for some reason evince didn't have borders.
+for_window [class="Evince"] border pixel 4
 
 exec --no-startup-id dropbox start
 
