@@ -21,8 +21,8 @@ order += "tztime edinburgh"
 order += "tztime toulouse"
 
 wireless _first_ {
-        format_up = "W: %essid"
-        format_down = "W: down"
+        format_up = "%essid"
+        format_down = "down"
 }
 
 battery 0 {
@@ -31,15 +31,15 @@ battery 0 {
 }
 
 volume master {
-  format = "♪: %volume"
-  format_muted = "♪: muted (%volume)"
+  format = "♪ %volume"
+  format_muted = "♪ muted (%volume)"
   device = "default"
   mixer = "Master"
   mixer_idx = 0
 }
 
 tztime local {
-        format = "%A %d %B %Y %H:%M %Z"
+        format = "%a %d %B %H:%M %Z"
 }
 
 tztime winnipeg {
